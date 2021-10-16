@@ -2,6 +2,7 @@
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
 ![GitHub repo size](https://img.shields.io/github/repo-size/aaronrss/MAXHEL)
 ![GitHub contributors](https://img.shields.io/github/contributors/aaronrss/MAXHEL)
+![GitHub contributors](https://img.shields.io/github/contributors/maxsafer/MAXHEL)
 ![Twitter Follow](https://img.shields.io/twitter/follow/aaronrosas_?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/FelipeGermen?style=social)
 
