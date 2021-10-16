@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/aaronrss/MAXHEL)
 ![GitHub contributors](https://img.shields.io/github/contributors/aaronrss/MAXHEL)
 ![Twitter Follow](https://img.shields.io/twitter/follow/aaronrosas_?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/FelipeGermen_?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/FelipeGermen?style=social)
 
 MAXHEL is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
 
