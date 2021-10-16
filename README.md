@@ -5,9 +5,12 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/aaronrosas_?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/FelipeGermen?style=social)
 
-MAXHEL is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
-
 Final project of the subject Programming languages developed with Elixir, focused on the implementation of encryption algorithms through the use of functional programming, recursion, lists, file I/O and concurrency.
+
+MAXHEL is an Elixir program that allows to ecnrypt .txt and .csv files through the "Caesar Cipher" algorithm using functional programming and recursion. For now we are focusing to acomplish this program to run with this algorithm for we would like to modify the algorithm to be less predictable. 
+
+The Elixir program reads the text file and assigns a line to a list as a string to be converted, all this lists will be stored on another list. The lists will be assigned to an individual thread in order to concurrently convert the whole text file.
+
 
 ## Prerequisites
 
@@ -21,24 +24,18 @@ Before you begin, ensure you have met the following requirements:
 
 To install MAXHEL, follow these steps:
 
-Linux and macOS:
+Elixir zip file:
 ```
 <install_command>
 ```
 
-Windows:
-```
-<install_command>
-```
 ## Using MAXHEL
 
 To use MAXHEL, follow these steps:
-
+`TBD`
 ```
 <usage_example>
 ```
-
-Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
 
 ## Contributing to MAXHEL
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
