@@ -20,7 +20,7 @@ defmodule Maxhel do
         |> Enum.map(&(String.split(&1,",")))
         #|> encryptC()
         # Cuenta el numero de renglos para dividir la encripción a los procesadores
-        #|> Enum.count()
+        |> Enum.count()
         #|> IO.inspect()
     end
 
@@ -47,6 +47,9 @@ defmodule Maxhel do
             |> String.replace("\n", "")
         data = filename
             |> read_data()
+        
+        # Llamar metodo de encriptación
+
     end
 
 end
