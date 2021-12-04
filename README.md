@@ -55,11 +55,11 @@ Take a peek into how MAXHEL is coded:
 
 
 MAXHEL during some of the test-phases:
-![test](./img/test.jpg)
+![test](./img/test.JPG)
 
 
 How MAXHEL works:
-![example](./img/example.jpg)
+![example](./img/example.jpeg)
 
 
 ## Prerequisites
