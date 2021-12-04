@@ -1,5 +1,5 @@
 # Final Project for Programming Languages
-_Maximiliano Sapien (A01027541), Aarón Rosas (A01335324), and Marcela Fuentes Lecuona (A01748161)_
+_Maximiliano Sapién (A01027541), Aarón Rosas (A01335324), and Marcela Fuentes Lecuona (A01748161)_
 
 ![logo](./img/logo.png) 
 
