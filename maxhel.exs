@@ -35,49 +35,40 @@ defmodule Maxhel do
         convert(char_list, shift_key, "")
     end
     def convert([head | tail], shift_key, acc) do
-      <<value::utf8>> = head
-      accumulator = acc <> List.to_string([shift(value, shift_key)])
-      convert(tail, shift_key, accumulator)
+        <<value::utf8>> = head
+        accumulator = acc <> List.to_string([shift(value, shift_key)])
+        convert(tail, shift_key, accumulator)
     end
     def convert([], _shift_key, acc) do
         acc
     end
 
     @doc """
-    All patterns that would possibly match the conversion for: numbers, symbols, lower case and upper case letters.
+    Encrypts all patterns that would possibly match the conversion.
     """
-    def shift(ch, n) when ch in ?a..?z do
-        rem(ch - ?a + n, 26) + ?a
-    end
-    def shift(ch, n) when ch in ?A..?Z do
-        rem(ch - ?A + n, 26) + ?A
-    end
-    def shift(ch, n) when ch == 32 do
-        rem(ch - 32 + n, 26) + 32
-    end
-    def shift(ch, n) when ch in 38..59  do
-        rem(ch - 38 + n, 21) + 38
+    def shift(ch, n) when ch in 1..255 do
+        rem(ch - 1 + n, 255) + 1
     end
     def shift(ch, _), do: ch
 
     @doc """
     Iterates the received list to encrypt it.
     """
-    def encryptC(list), do: do_encryptC(list, [])
-    defp do_encryptC([], result),
+    def encryptC(list, key), do: do_encryptC(list, [], key)
+    defp do_encryptC([], result, key),
         do: result
-    defp do_encryptC([head|tail], result),
-        do: do_encryptC(tail, result ++ [convert(head, 10)])
+    defp do_encryptC([head|tail], result, key),
+        do: do_encryptC(tail, result ++ [convert(head, key)], key)
 
     @doc """
     This method makes the encryptC() call parallel.
     """
-    def encrypt_parallel(list) do
+    def encrypt_parallel(list, key) do
         n = length(list)
         temp = []
 
         1..n
-        |> Enum.map(&Task.async(fn -> encryptC([Enum.at(list, &1 - 1)] ++ temp) end))
+        |> Enum.map(&Task.async(fn -> encryptC([Enum.at(list, &1 - 1)] ++ temp, key) end))
         |> Enum.map(&Task.await(&1, 50000))
     end
 
@@ -97,10 +88,14 @@ defmodule Maxhel do
     to "read_data()", then we save the results of "read_data()" in a variable which we send to the next method "encrypt_parallel()" and
     we save the result to another variable which we then use to write the encrypted data (write_data()) to a .txt file.
     """
-    def main(filename) do
-        data = filename
+    def main(filename, key) do
+        if ((key >= -6) && (key <= 6)) do
+            data = filename
             |> read_data()
-        res = encrypt_parallel(data)
-        write_data(res, "encriptado.txt")
+            res = encrypt_parallel(data, key)
+            write_data(res, "encriptado.txt")
+        else
+           "Out of bounds parameter, only up to 6 to encypt and -6 to decrypt."
+        end
     end
 end
