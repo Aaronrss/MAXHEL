@@ -1,5 +1,5 @@
 # Final Project for Programming Languages
-_Maximiliano Sapien (A01027541), Aarón Rosas (A01335324), and Marcela Fuentes Lecuona (A01748161)_
+_Maximiliano Sapien (A01027541), Aarón Rosas (A01335324), and Marcela Fuentes (A01748161)_
 
 ![logo](./img/logo.png) 
 
@@ -49,27 +49,42 @@ The following technique will be implemented in the program:
         - Return the new string generated.
         - For decryption, apply the given shift in the opposite direction to decrypt the original text.
 
+
+Take a peek into how MAXHEL is coded:
+![codeex](./img/codex.png)
+
+
+MAXHEL during some of the test-phases:
+![test](./img/test.jpg)
+
+
+How MAXHEL works:
+![example](./img/example.jpg)
+
+
 ## Prerequisites
 
 Make sure the following requirements are met:
 * Latest version of `<Elixir/dependency/requirement_1>`
+    * We reccomend using the ElixirLS extension in Visual Studio Code.
 * You have a `<Windows/Linux/Mac>` machine
 
 ## Installing MAXHEL
 
 To install MAXHEL, follow the next steps:
 
-Elixir zip file:
 ```
-<install_command>
+gh repo clone https://github.com/Aaronrss/MAXHEL
 ```
 
 ## Using MAXHEL
 
 To use MAXHEL, follow the next steps:
-`TBD`
+
+- First of all, navigate to the MAXHEL folder in your computer.
+- Run the iex command with the relative path of the file to start an iex (Interactive Elixir) session.
 ```
-<usage_example>
+iex MAXHEL/maxhel.exs
 ```
 
 ## Contributors
@@ -82,3 +97,4 @@ To use MAXHEL, follow the next steps:
 ## References
 - Fox, P. (n.d.). _The Need for Encryption_. Khan Academy. Recovered from https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/the-need-for-encryption
 - GeeksForGeeks. (April 6, 2021). _Caesar Cipher in Cryptography_. Recovered from https://www.geeksforgeeks.org/caesar-cipher-in-cryptography/
+- The Pragmatic Studio. (April 27, 2017). _Create a Mix Project and Run Elixir Code_. Recovered from https://pragmaticstudio.com/tutorials/create-elixir-mix-project-and-run-code
