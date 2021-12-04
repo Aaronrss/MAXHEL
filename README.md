@@ -59,7 +59,7 @@ MAXHEL during some of the test-phases:
 
 
 How MAXHEL works:
-![example](./img/example.jpeg)
+![example](./img/example.JPG)
 
 
 ## Prerequisites
