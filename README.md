@@ -51,14 +51,17 @@ The following technique will be implemented in the program:
 
 
 Take a peek into how MAXHEL is coded:
+
 ![codeex](./img/codex.png)
 
 
 MAXHEL during some of the test-phases:
+
 ![test](./img/test.JPG)
 
 
 How MAXHEL works:
+
 ![example](./img/example.JPG)
 
 
