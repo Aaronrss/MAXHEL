@@ -7,9 +7,9 @@
 
 defmodule Maxhel do
     @moduledoc """
-    Allows to ecnrypt .txt and .csv files through the "Caesar Cipher" algorithm using functional
-    programming and recursion. For now we are focusing to acomplish this program to run with this
-    algorithm for we would like to modify the algorithm to be less predictable.
+    Allows the encryption of .txt and .csv files through the "Caesar Cipher" algorithm by using functional
+    programming and recursion. For now we are focusing to accomplish this program to run with this
+    algorithm; for future references we would like to modify the algorithm to be less predictable.
 
     The Elixir program reads the text file and assigns a line to a list as a string to be converted,
     all this lists will be stored on another list. The lists will be assigned to an individual
@@ -17,7 +17,7 @@ defmodule Maxhel do
     """
 
     @doc """
-    Returns a list with the contents of the file in a way we can handle with our other methods.
+    Returns a list with the contents of the file in a way the system can handle with the following methods.
     """
     def read_data(filename) do
         filename
@@ -27,8 +27,8 @@ defmodule Maxhel do
     end
 
     @doc """
-    This method converts a received string into a charlist, this is done so we can convert each of the
-    chars into another symbol thorugh its decimal value.
+    This method converts the received string into a charlist; this is done so each of the
+    chars can be converted into another symbol through its decimal value.
     """
     def convert(str, shift_key) when is_binary(str) do
         char_list = String.codepoints(str)
